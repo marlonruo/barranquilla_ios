@@ -1,0 +1,27 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-opentok-android-permissions": {
+      "PACKAGE_NAME": "org.mexicobarranquilla.app"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "org.mexicobarranquilla.app"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "org.mexicobarranquilla.app"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "org.mexicobarranquilla.app"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "org.mexicobarranquilla.app"
+    }
+  },
+  "dependent_plugins": {}
+}

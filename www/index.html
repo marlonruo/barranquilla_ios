@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="msapplication-tap-highlight" content="no" />
+<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+<!--<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />-->
+
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+
+
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.form.js"></script>
+<script src="js/move.js"></script>
+<script src="js/jquery.event.swipe.js"></script>
+
+
+
+
+<style>
+.circle {
+    width: 35%;
+    height:0;
+    padding-bottom: 35%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+	.redondo{
+		-moz-border-radius: 4px;
+    	-webkit-border-radius: 4px;
+    	border-radius: 4px;
+	}
+.textos_exg{
+	position:absolute;
+	font-size: 4.5vh;
+}
+
+.textos_ex{
+	position:absolute;
+	font-size: 3.5vh;
+}
+
+.textos_g{
+	position:absolute;
+	font-size: 3vh;
+}
+
+.textos_m{
+	position:absolute;
+	font-size: 2.2vh;
+}
+
+.textos_c{
+	position:absolute;
+	font-size: 1.8vh;
+}
+
+.textos_cx{
+	position:absolute;
+	font-size: 1.1vh;
+}
+</style>
+
+<title>Mexico en Barranquilla</title>
+ </head>
+ <body>
+
+
+ <div class="app">
+
+
+
+
+    <div id="todo" style="position:absolute; width: 100%; height: 100%; background:#fff; background-size: 100% 100%; overflow:hidden">
+
+    		<div id="inicio" style="position:absolute; width: 100%; height: calc(93% - 20px); top: 7%; overflow: hidden; display: none; overflow-x:hidden; overflow-y:auto"><!--galeria-->
+    		</div><!------------fin galeria---------->
+
+    		<div id="actividades" style="position:absolute; width: 100%; height: calc(93% - 20px); top: 7%; overflow: hidden; display: none; overflow-x:hidden; overflow-y:auto"><!--tendings-->
+          act
+    		</div><!------------fin trending---------->
+
+        <div id="disciplinas" style="position:absolute; width: 100%; height: calc(93% - 20px); top: 7%; overflow: hidden; display: none; overflow-x:hidden; overflow-y:auto"><!--tendings-->
+    		</div><!------------fin trending---------->
+
+    		<div id="deportistas" style="position:absolute; width: 100%; height: calc(93% - 20px); top: 7%; overflow: hidden; display: none; overflow-x:hidden; overflow-y:auto"><!--favoritos-->
+    		</div><!------------fin favoritos---------->
+
+        <div id="noticias" style="position:absolute; width: 100%; height: calc(93% - 20px); top: 7%; overflow: hidden; display: none; overflow-x:hidden; overflow-y:auto"><!--favoritos-->
+    		</div><!------------fin favoritos---------->
+
+        <div id="medallero" style="position:absolute; width: 100%; height: calc(93% - 20px); top: 7%; overflow: hidden; display: none; overflow-x:hidden; overflow-y:auto"><!--favoritos-->
+    		</div><!------------fin favoritos---------->
+
+        <div id="individual" style="position:absolute; width: 100%; height: calc(93% - 20px); top: 7%; overflow: hidden; display: none; overflow-x:hidden; overflow-y:auto"><!--favoritos-->
+    		</div><!------------fin favoritos---------->
+
+
+    		<div id="contacto" style="position:absolute; width: 100%; height: 93%; top: 7%; overflow: hidden; display: none"><!--contacto-->
+    			<div class="textos_m centrar_h" style="color:#2B2B28; top:6%; font-weight: bold; text-align: center; padding-left:10%; background: url(img/contacto.png) no-repeat; background-position: left; background-size:auto 50%">CONTACT US</div>
+
+
+    			<div style="position:absolute; width:80%; height:80%; left:10%; top: 16%">
+
+    				<div class="textos_m" style="color:#2B2B28; top:0%; width: 100%">NAME</div>
+    				<input type="text" id="contacto_nombre"  name="contacto_nombre" class="textos_m" style="position: absolute; width: calc(95% - 2px); top: 7%; height: 8%; padding-left: 5%" onFocus="$('#crece').stop().fadeIn(0); scroll1()" onBlur="$('#crece').fadeOut(500); scroll0(); StatusBar.hide();">
+
+    				 <div class="textos_m" style="color:#2B2B28; top:20%; width: 100%">EMAIL</div>
+    				 <input type="email" id="contacto_email"  name="contacto_email" class="textos_m" style="position: absolute; width: calc(95% - 2px); top: 27%; height: 8%; padding-left: 5%" onFocus="$('#crece').stop().fadeIn(0); scroll2()" onBlur="$('#crece').fadeOut(500); scroll0(); StatusBar.hide();">
+
+    				  <div class="textos_m" style="color:#2B2B28; top:40%; width: 100%">COMMENTS</div>
+
+    				 <textarea id="contacto_comentarios" name="contacto_comentarios" class="textos_m" style="position: absolute; width: calc(95% - 2px); top: 47%; height: 28%; padding-left: 5%; font-family: nun"  onFocus="$('#crece').stop().fadeIn(0); scroll3()" onBlur="$('#crece').fadeOut(500); scroll0(); StatusBar.hide();"></textarea>
+
+    				 <input id="boton_contacto" type="button" class="textos_m" style="position: absolute; width:100%; top: 80%; height: calc(8% + 0px); text-align: center; color: #fff; background: url(img/boton_caster.png) no-repeat; background-size: 100% 100%; border: none" value="SEND">
+
+    				 <div id="retro_contacto" class="textos_m" style="top: 90%; width: 100%; text-align: right; color: #760694; font-weight: bold"></div>
+    			</div>
+
+
+
+			<script>
+							$('#boton_contacto').click(function(){
+								var correo = document.getElementById('contacto_email').value
+								var filtro = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+								if (!filtro.test(correo)) {
+									$('#retro_contacto').show()
+									$('#retro_contacto').html('* Email address required')
+									setTimeout("$('#retro_contacto').html('')", 2000)
+									return false;
+								}
+
+
+								$.ajax({
+									url:   'https://watchmeweb.com/web/php/enviar_correo.php',
+									type:  'post',
+									data: {nombre: document.getElementById("contacto_nombre").value, correo:document.getElementById("contacto_email").value , comentarios: document.getElementById("contacto_comentarios").value},
+									beforeSend: function () {
+									},
+									success: function (response) {
+										$('#retro_contacto').fadeIn()
+										$('#retro_contacto').html('Email send')
+										$('#retro_contacto').delay(1800).fadeOut()
+										document.getElementById("contacto_comentarios").value = "";
+									}
+								});
+							})
+			</script>
+		</div><!------------fin contacto---------->
+
+
+
+
+
+
+
+
+
+		  <div id="menu" style="position:absolute; width: 100%; height: 7%; background: #FFFFFF; border-bottom:1px solid #efefef"><!--MENU-->
+        <img id="bt_menu" src="img/menu.png" class="centrar_v" style="height: 45%; left: 5%; cursor: pointer; opacity:0.5"/>
+        <img id="bt_logo" src="img/loguito.png" class="centrar" style="height: 60%; cursor: pointer"/>
+        <img id="bt_act" src="img/clock.png" class="centrar_v" style="height: 45%; right: 5%; cursor: pointer; opacity:0.5"/>
+	    </div><!--fin MENU-->
+
+
+		<script>
+			$('#bt_menu').click(function(){
+				  $('#negro').fadeIn(500)
+					$('#menu_b').css('margin-left', '-70%')
+					$('#menu_b').show()
+					$('#menu_b').animate({marginLeft:'0px'}, 500)
+			})
+
+			$('#bt_logo').click(function(){
+            lugar = "inicio"
+            $('.mm').css('opacity','1')
+            $('#bt_inicio').css('opacity','0.6')
+						$('#inicio').show()
+            $('#disciplinas, #deportistas, #noticias, #medallero, #actividades').hide()
+						$('#inicio').load('https://watchmeweb.com/bar/inicio2.php')
+						$('#trending').hide()
+			})
+
+
+		</script>
+
+
+
+
+
+
+	</div><!--fin todo-->
+
+
+     <!----------------------------ARRIBA------------------------------>
+
+	<div id="negro" style="position: fixed; width: 100%; height: 100%; background:rgba(0,0,0,0.7); z-index:100; display: none"></div>
+
+
+
+
+
+		<div id="menu_b" style="position:absolute; width:70%; height:100%; background:#fff; z-index:201; left: 0px; display: none">
+   			<div class="textos_g" style="left:20%; top: 17%; color: #0D0D0D; font-weight: bold">MENÚ</div>
+
+
+        <div id="bt_inicio" class="textos_m mm" style="left:20%; top: 36%; color: #2A2A2A; cursor: pointer; padding-left: 10%; background-image:url('img/house.png'); background-size:auto 70%; background-repeat:no-repeat; background-position:4% 50%; opacity:0.6">Inicio</div>
+        <div id="bt_actividades" class="textos_m mm" style="left:20%; top: 42%; color: #2A2A2A; cursor: pointer; padding-left: 10%; background-image:url('img/clock.png'); background-size:auto 70%; background-repeat:no-repeat; background-position:4% 50%;">Actividades</div>
+        <div id="bt_disciplinas" class="textos_m mm" style="left:20%; top: 48%; color: #2A2A2A; cursor: pointer; padding-left: 10%; background-image:url('img/olympic.png'); background-size:auto 100%; background-repeat:no-repeat; background-position:0% 50%;">Disciplinas</div>
+        <div id="bt_deportistas" class="textos_m mm" style="left:20%; top: 54%; color: #2A2A2A; cursor: pointer; padding-left: 10%;; background-image:url('img/avatar.png'); background-size:auto 70%; background-repeat:no-repeat; background-position:2% 50%">Deportistas</div>
+        <div id="bt_noticias" class="textos_m mm" style="left:20%; top: 60%; color: #2A2A2A; cursor: pointer; padding-left: 10%;; background-image:url('img/news.png'); background-size:auto 70%; background-repeat:no-repeat; background-position:2% 50%">Noticias</div>
+        <div id="bt_medallero" class="textos_m mm" style="left:20%; top: 66%; color: #2A2A2A; cursor: pointer; padding-left: 10%;; background-image:url('img/medal.png'); background-size:auto 90%; background-repeat:no-repeat; background-position:2% 50%">Medallero</div>
+		</div>
+
+
+        		<script>
+            $('#negro').click(function(){
+              $('#negro').fadeOut(500)
+              $('#menu_b').animate({marginLeft:'-70%'}, 500)
+            })
+            var lugar = "inicio"
+            $('#bt_inicio').click(function(){
+              lugar = "inicio"
+              $('.mm').css('opacity','1')
+              $(this).css('opacity','0.6')
+              $('#inicio').show()
+              $('#disciplinas, #deportistas, #noticias, #medallero, #actividades').hide()
+        			$('#inicio').load('https://watchmeweb.com/bar/inicio2.php')
+              $('#negro').fadeOut(500)
+              $('#menu_b').animate({marginLeft:'-70%'}, 500)
+        		})
+
+            $('#bt_actividades, #bt_act').click(function(){
+              lugar = "actividades"
+              $('.mm').css('opacity','1')
+              $(this).css('opacity','0.6')
+              $('#actividades').show()
+              $('#disciplinas, #deportistas, #noticias, #medallero, #inicio').hide()
+        			$('#actividades').load('https://watchmeweb.com/bar/actividades.php')
+              $('#negro').fadeOut(500)
+              $('#menu_b').animate({marginLeft:'-70%'}, 500)
+        		})
+
+        		$('#bt_disciplinas').click(function(){
+              lugar = "disciplinas"
+              $('.mm').css('opacity','1')
+              $(this).css('opacity','0.6')
+              $('#disciplinas').show()
+        			$('#inicio, #deportistas, #noticias, #medallero, #actividades').hide()
+        			$('#disciplinas').load('https://watchmeweb.com/bar/disciplinas.php')
+              $('#negro').fadeOut(500)
+              $('#menu_b').animate({marginLeft:'-70%'}, 500)
+        		})
+
+            $('#bt_deportistas').click(function(){
+              lugar = "deportistas"
+              $('.mm').css('opacity','1')
+              $(this).css('opacity','0.6')
+              $('#deportistas').show()
+        			$('#inicio, #disciplinas, #noticias, #medallero, #actividades').hide()
+        			$('#deportistas').load('https://watchmeweb.com/bar/deportistas.php')
+              $('#negro').fadeOut(500)
+              $('#menu_b').animate({marginLeft:'-70%'}, 500)
+        		})
+
+            $('#bt_noticias').click(function(){
+              lugar = "noticias"
+              $('.mm').css('opacity','1')
+              $(this).css('opacity','0.6')
+              $('#noticias').show()
+        			$('#inicio, #disciplinas, #deportistas, #medallero, #actividades').hide()
+        			$('#noticias').load('https://watchmeweb.com/bar/noticias2.php')
+              $('#negro').fadeOut(500)
+              $('#menu_b').animate({marginLeft:'-70%'}, 500)
+        		})
+
+            $('#bt_medallero').click(function(){
+              lugar = "medallero"
+              $('.mm').css('opacity','1')
+              $(this).css('opacity','0.6')
+              $('#medallero').show()
+        			$('#inicio, #disciplinas, #deportistas, #noticias, #actividades').hide()
+        			$('#medallero').load('https://watchmeweb.com/bar/medallero.php')
+              $('#negro').fadeOut(500)
+              $('#menu_b').animate({marginLeft:'-70%'}, 500)
+        		})
+        		</script>
+
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+
+	 <script>
+
+function onDeviceReady() {
+      $('#inicio').show()
+      $('#inicio').load('https://watchmeweb.com/bar/inicio2.php')
+      document.addEventListener("backbutton", handleBackButton, true);
+}
+function handleBackButton(){
+      $('#negro').fadeOut(500)
+      $('#menu_b').animate({marginLeft:'-70%'}, 500)
+
+      if(lugar == 'actividades' || lugar == 'disciplinas' || lugar == 'deportistas' || lugar == 'noticias' || lugar == 'medalleros' || lugar == 'contacto' || lugar == 'regresa'){
+        lugar = "inicio"
+        $('.mm').css('opacity','1')
+        $(this).css('opacity','0.6')
+        $('#inicio').show()
+        $('#disciplinas, #deportistas, #noticias, #medallero, #actividades').hide()
+        $('#inicio').load('https://watchmeweb.com/bar/inicio2.php')
+      }else if(lugar == 'individual'){
+        lugar = "regresa"
+        $('#individual').hide()
+      }
+}
+
+document.addEventListener("deviceready", onDeviceReady, false);
+
+	 </script>
+
+    </body>
+</html>
